@@ -8,7 +8,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
-@Database(entities = {ListItem.class}, version = 1, exportSchema = false)
+@Database(entities = {ListItem.class}, version = 3, exportSchema = false)
 public abstract class ShoppingListDatabase extends RoomDatabase {
 
     public abstract ListItemDao listItemDao();
@@ -44,6 +44,7 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
 
         private final ListItemDao dao;
         String[] names = {"Bacon", "Chicken", "Milk"};
+        String[] descriptions = {"Glorious piggu noms", "Glorious cluck cluck noms", "Glorious cow juice"};
 
         PopulateDbAsync(ShoppingListDatabase db) {
             dao = db.listItemDao();
@@ -54,7 +55,7 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
             dao.deleteAll();
 
             for(int i = 0; i <= names.length - 1; i++) {
-                ListItem listItem = new ListItem(names[i]);
+                ListItem listItem = new ListItem(names[i], descriptions[i], false);
                 dao.insert(listItem);
             }
 

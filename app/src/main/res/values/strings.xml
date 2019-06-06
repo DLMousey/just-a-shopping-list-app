@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Shopping List</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Missing text placeholders | List view -->
+    <string name="list_name_missing_text">Name Missing!</string>
+    <string name="list_description_missing_text">Description Missing!</string>
 </resources>

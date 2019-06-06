@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CheckboxItemClickListener.OnRecyclerClickListener {
 
     private ListItemViewModel listItemViewModel;
     private RecyclerView recyclerView;
@@ -42,10 +42,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        recyclerView = findViewById(R.id.recyclerview);
         adapter = new ListItemAdapter(this);
+        recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.addOnItemTouchListener(new CheckboxItemClickListener(this, recyclerView, this));
 
         // Retrieve the existing instance of the ListItemViewModel, this will allow us
         // to keep our data that's already in there after a config change (eg. rotating the phone)
@@ -73,7 +74,12 @@ public class MainActivity extends AppCompatActivity {
                 public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
                     int position = viewHolder.getAdapterPosition();
                     ListItem listItem = adapter.getListItemAtPosition(position);
-                    Toast.makeText(MainActivity.this, "Deleting " + listItem.getName(), Toast.LENGTH_LONG).show();
+                    Snackbar.make(
+                            viewHolder.itemView,
+                            String.format("Deleting %s from list", listItem.getName()),
+                            Snackbar.LENGTH_LONG
+                    ).show();
+//                    Toast.makeText(MainActivity.this, "Deleting " + listItem.getName(), Toast.LENGTH_LONG).show();
 
                     listItemViewModel.delete(listItem);
                 }
@@ -103,5 +109,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void OnItemClick(View view, int position) {
+        ListItem item = adapter.markInBasket(position);
+        Boolean inBasket = item.getInBasket();
+        String itemName = item.getName();
+        String message;
+
+        if(inBasket) {
+            message = String.format("Added %s to basket", itemName);
+        } else {
+            message = String.format("Removed %s from basket", itemName);
+        }
+
+        Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show();
     }
 }
