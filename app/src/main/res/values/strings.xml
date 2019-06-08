@@ -2,6 +2,14 @@
     <string name="app_name">Shopping List</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Inputs -->
+        <!-- Labels -->
+        <string name="label_name_text">Product Name</string>
+        <string name="label_description_text">Product Description</string>
+
+        <!-- Buttons -->
+        <string name="button_new_item_save_text">Save + add to cart</string>
+
     <!-- Missing text placeholders | List view -->
     <string name="list_name_missing_text">Name Missing!</string>
     <string name="list_description_missing_text">Description Missing!</string>

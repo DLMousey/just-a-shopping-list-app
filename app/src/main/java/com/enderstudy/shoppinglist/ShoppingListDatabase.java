@@ -22,7 +22,6 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), // Create an instance
                             ShoppingListDatabase.class, "list_item_database")
                             .fallbackToDestructiveMigration()
-                            .addCallback(roomDatabaseCallback)
                             .build();
                 }
             }
