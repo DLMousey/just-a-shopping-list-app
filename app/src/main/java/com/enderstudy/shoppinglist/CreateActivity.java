@@ -49,7 +49,13 @@ public class CreateActivity extends AppCompatActivity {
     public void saveItem(View view) {
         String name = nameInput.getText().toString();
         String description = descriptionInput.getText().toString();
-        Double price = Double.parseDouble(priceInput.getText().toString());
+        Double price;
+
+        try {
+            price = Double.parseDouble(priceInput.getText().toString());
+        } catch (NumberFormatException e) {
+            price = null;
+        }
 
         if (!editing) {
             this.createItem(name, description, price);
@@ -60,6 +66,7 @@ public class CreateActivity extends AppCompatActivity {
 
     private void createItem(String name, String description, Double price) {
         Boolean inBasket = false;
+        price = (price != null) ? price : 0D;
         ListItem item = new ListItem(name, description, inBasket, price);
         listItemRepository.insert(item);
 
@@ -70,7 +77,7 @@ public class CreateActivity extends AppCompatActivity {
     private void updateItem(String name, String description, Double price) {
         editingItem.setName(name);
         editingItem.setDescription(description);
-        editingItem.setPrice(price);
+        editingItem.setPrice((price != null) ? price : 0D);
 
         listItemRepository.update(editingItem);
 
