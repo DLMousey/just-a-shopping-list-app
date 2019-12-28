@@ -8,10 +8,38 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <TextView
+        android:id="@+id/empty_lead_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No items in cart"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/empty_sub_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add an item by clicking the orange button below"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empty_lead_textview" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/recyclerview_item" />
 
 </android.support.constraint.ConstraintLayout>

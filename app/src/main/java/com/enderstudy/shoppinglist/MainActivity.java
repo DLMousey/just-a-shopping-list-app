@@ -1,5 +1,6 @@
 package com.enderstudy.shoppinglist;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.enderstudy.shoppinglist.listeners.CheckboxItemClickListener;
 
@@ -27,11 +29,20 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
     private RecyclerView recyclerView;
     private ListItemAdapter adapter;
 
+    private TextView emptyLeadText;
+    private TextView emptySubText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        this.deleteDatabase("list_item_database");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
+        emptyLeadText = findViewById(R.id.empty_lead_textview);
+        emptySubText = findViewById(R.id.empty_sub_textview);
+
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -61,6 +72,14 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
             @Override
             public void onChanged(@Nullable List<ListItem> listItems) {
                 adapter.setListItems(listItems);
+
+                if (listItems.size() == 0) {
+                    emptyLeadText.setVisibility(View.VISIBLE);
+                    emptySubText.setVisibility(View.VISIBLE);
+                } else {
+                    emptyLeadText.setVisibility(View.INVISIBLE);
+                    emptySubText.setVisibility(View.INVISIBLE);
+                }
             }
         });
 
