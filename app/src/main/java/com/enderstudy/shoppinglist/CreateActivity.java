@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
@@ -73,6 +74,7 @@ public class CreateActivity extends AppCompatActivity {
 
         listItemRepository.update(editingItem);
 
+        Toast.makeText(this, "Updated " + name, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

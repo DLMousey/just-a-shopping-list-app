@@ -21,7 +21,6 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
                 if (INSTANCE == null) { // If we've still got no instance
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), // Create an instance
                             ShoppingListDatabase.class, "list_item_database")
-                            .addCallback(roomDatabaseCallback)
                             .fallbackToDestructiveMigration()
                             .build();
                 }
@@ -29,38 +28,5 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
         }
 
         return INSTANCE;
-    }
-
-    // Callback to populate the database while in development
-    private static RoomDatabase.Callback roomDatabaseCallback = new RoomDatabase.Callback(){
-        @Override
-        public void onOpen(@NonNull SupportSQLiteDatabase db) {
-            super.onOpen(db);
-            new PopulateDbAsync(INSTANCE).execute();
-        }
-    };
-
-    private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
-
-        private final ListItemDao dao;
-        String[] names = {"Bacon", "Chicken", "Milk"};
-        String[] descriptions = {"Glorious piggu noms", "Glorious cluck cluck noms", "Glorious cow juice"};
-        Double[] prices = {1.25, 2.50, 1.00};
-
-        PopulateDbAsync(ShoppingListDatabase db) {
-            dao = db.listItemDao();
-        }
-
-        @Override
-        protected Void doInBackground(final Void... params) {
-            dao.deleteAll();
-
-            for(int i = 0; i <= names.length - 1; i++) {
-                ListItem listItem = new ListItem(names[i], descriptions[i], false, prices[i]);
-                dao.insert(listItem);
-            }
-
-            return null;
-        }
     }
 }
