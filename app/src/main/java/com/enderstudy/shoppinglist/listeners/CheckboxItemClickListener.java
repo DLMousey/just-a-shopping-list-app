@@ -1,4 +1,4 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.listeners;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.view.View;
 
 public class CheckboxItemClickListener extends RecyclerView.SimpleOnItemTouchListener {
 
-    interface OnRecyclerClickListener {
+    public interface OnRecyclerClickListener {
         void OnItemClick(View view, int position);
     }
 

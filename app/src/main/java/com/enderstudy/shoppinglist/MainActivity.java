@@ -16,7 +16,8 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+
+import com.enderstudy.shoppinglist.listeners.CheckboxItemClickListener;
 
 import java.util.List;
 
@@ -79,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
                             String.format("Deleting %s from list", listItem.getName()),
                             Snackbar.LENGTH_LONG
                     ).show();
-//                    Toast.makeText(MainActivity.this, "Deleting " + listItem.getName(), Toast.LENGTH_LONG).show();
 
                     listItemViewModel.delete(listItem);
                 }

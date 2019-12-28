@@ -25,6 +25,10 @@ public class ListItemRepository {
         new insertAsyncTask(listItemDao).execute(listItem);
     }
 
+    public void update(ListItem listItem) {
+        new updateAsyncTask(listItemDao).execute(listItem);
+    }
+
     public void delete(ListItem listItem) {
         new deleteAsyncTask(listItemDao).execute(listItem);
     }
@@ -46,6 +50,21 @@ public class ListItemRepository {
         @Override
         protected Void doInBackground(final ListItem... params) {
             asyncListItemDao.insert(params[0]);
+            return null;
+        }
+    }
+
+    private static class updateAsyncTask extends AsyncTask<ListItem, Void, Void> {
+
+        private ListItemDao asyncListItemDao;
+
+        updateAsyncTask(ListItemDao dao) {
+            asyncListItemDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final ListItem... params) {
+            asyncListItemDao.update(params[0]);
             return null;
         }
     }

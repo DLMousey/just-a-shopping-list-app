@@ -8,7 +8,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
-@Database(entities = {ListItem.class}, version = 3, exportSchema = false)
+@Database(entities = {ListItem.class}, version = 4, exportSchema = false)
 public abstract class ShoppingListDatabase extends RoomDatabase {
 
     public abstract ListItemDao listItemDao();
@@ -21,6 +21,7 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
                 if (INSTANCE == null) { // If we've still got no instance
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(), // Create an instance
                             ShoppingListDatabase.class, "list_item_database")
+                            .addCallback(roomDatabaseCallback)
                             .fallbackToDestructiveMigration()
                             .build();
                 }
@@ -44,6 +45,7 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
         private final ListItemDao dao;
         String[] names = {"Bacon", "Chicken", "Milk"};
         String[] descriptions = {"Glorious piggu noms", "Glorious cluck cluck noms", "Glorious cow juice"};
+        Double[] prices = {1.25, 2.50, 1.00};
 
         PopulateDbAsync(ShoppingListDatabase db) {
             dao = db.listItemDao();
@@ -54,7 +56,7 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
             dao.deleteAll();
 
             for(int i = 0; i <= names.length - 1; i++) {
-                ListItem listItem = new ListItem(names[i], descriptions[i], false);
+                ListItem listItem = new ListItem(names[i], descriptions[i], false, prices[i]);
                 dao.insert(listItem);
             }
 
