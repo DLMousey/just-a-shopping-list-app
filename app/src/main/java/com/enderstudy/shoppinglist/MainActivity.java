@@ -1,6 +1,5 @@
 package com.enderstudy.shoppinglist;
 
-import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -14,9 +13,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.enderstudy.shoppinglist.listeners.CheckboxItemClickListener;
@@ -34,8 +33,6 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        this.deleteDatabase("list_item_database");
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
