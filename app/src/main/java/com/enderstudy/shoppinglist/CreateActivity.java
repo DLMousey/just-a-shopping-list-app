@@ -66,11 +66,9 @@ public class CreateActivity extends AppCompatActivity {
 
     private void createItem(String name, String description, Double price) {
         if (name.isEmpty()) {
-            Toast.makeText(this, "Name cannot be empty", Toast.LENGTH_LONG);
+            Toast.makeText(this, "Name cannot be empty", Toast.LENGTH_LONG).show();
             return;
         }
-
-        Log.d("CREATEITEM", "createItem: name is not empty");
 
         Boolean inBasket = false;
         price = (price != null) ? price : 0D;
