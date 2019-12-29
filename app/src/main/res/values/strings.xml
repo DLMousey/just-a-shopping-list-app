@@ -3,15 +3,18 @@
     <string name="action_settings">Settings</string>
 
     <!-- Inputs -->
-        <!-- Labels -->
-        <string name="label_name_text">Product Name</string>
-        <string name="label_description_text">Product Description</string>
+    <!-- Labels -->
+    <string name="label_name_text">Product Name</string>
+    <string name="label_description_text">Product Description</string>
 
-        <!-- Buttons -->
-        <string name="button_new_item_save_text">Save</string>
+    <!-- Buttons -->
+    <string name="button_new_item_save_text">Save</string>
 
     <!-- Missing text placeholders | List view -->
     <string name="list_name_missing_text">Name Missing!</string>
     <string name="list_description_missing_text">Description Missing!</string>
     <string name="label_price_text">Price</string>
+    <string name="privacy_notice_header">A note on privacy</string>
+    <string name="privacy_notice">We are proud to say that this app isn\'t capable of transmitting any data over the internet because it requests no permissions from you, the user.\n\nAll data is stored within a SQLite database on your device which cannot be accessed remotely.\n\nPlease enjoy using this application which respects your privacy - we\'re just as fed up of privacy invasion being the norm as you are.\n\nIf you would like to audit the source code for yourself - this app is also open source.</string>
+    <string name="action_privacy">Privacy</string>
 </resources>

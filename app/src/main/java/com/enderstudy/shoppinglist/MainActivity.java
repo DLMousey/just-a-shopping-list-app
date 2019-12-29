@@ -123,4 +123,27 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
 
         Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show();
     }
+
+    /**
+     * Add the options menu to the top right of the activity
+     * @param menu - Android studio wouldn't stop whining until i added something here
+     * @return - Android studio wouldn't stop whining until i added something here
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_privacy:
+                Intent privacyIntent = new Intent(this, PrivacyActivity.class);
+                startActivity(privacyIntent);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
