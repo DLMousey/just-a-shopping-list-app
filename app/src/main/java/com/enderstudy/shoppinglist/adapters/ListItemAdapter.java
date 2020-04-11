@@ -68,7 +68,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListIt
         });
     }
 
-    void setListItems(List<ListItem> items) {
+    public void setListItems(List<ListItem> items) {
         listItems = items;
         notifyDataSetChanged();
     }

@@ -4,6 +4,8 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 
+import com.enderstudy.shoppinglist.repositories.ListItemRepository;
+
 import java.util.List;
 
 /*
@@ -23,7 +25,7 @@ public class ListItemViewModel extends AndroidViewModel {
         allListItems = repository.getAllListItems();
     }
 
-    LiveData<List<ListItem>> getAllListItems() {
+    public LiveData<List<ListItem>> getAllListItems() {
         return allListItems;
     }
 

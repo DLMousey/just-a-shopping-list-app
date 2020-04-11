@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.enderstudy.shoppinglist.adapters.ListItemAdapter;
 import com.enderstudy.shoppinglist.listeners.CheckboxItemClickListener;
 
 import java.util.List;
