@@ -112,6 +112,8 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
         String itemName = item.getName();
         String message;
 
+        listItemViewModel.update(item);
+
         if(inBasket) {
             message = String.format("Added %s to basket", itemName);
         } else {

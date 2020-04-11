@@ -41,4 +41,8 @@ public class ListItemViewModel extends AndroidViewModel {
         repository.delete(listItem);
     }
 
+    public void update(ListItem listItem) {
+        repository.update(listItem);
+    }
+
 }
