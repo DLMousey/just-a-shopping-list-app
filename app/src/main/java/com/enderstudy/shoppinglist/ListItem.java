@@ -30,7 +30,7 @@ public class ListItem implements Serializable {
 
     @NonNull
     @ColumnInfo(name="in_basket")
-    private Boolean inBasket;
+    private Boolean inBasket = false;
 
     public ListItem(@NonNull String name,
                     @Nullable String description,

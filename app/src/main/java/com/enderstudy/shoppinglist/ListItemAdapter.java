@@ -43,7 +43,12 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListIt
             holder.nameTextView.setText(current.getName());
             holder.descriptionTextView.setText(current.getDescription());
             holder.priceTextView.setText(format.format(current.getPrice()));
-            holder.inBasketCheckbox.setChecked(current.getInBasket());
+
+            if (current.getInBasket() == true) {
+                holder.inBasketCheckbox.setChecked(true);
+            } else {
+                holder.inBasketCheckbox.setChecked(false);
+            }
         } else {
             holder.nameTextView.setText(R.string.list_name_missing_text);
             holder.descriptionTextView.setText(R.string.list_description_missing_text);
