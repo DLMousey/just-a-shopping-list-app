@@ -1,4 +1,4 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.databases;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;

@@ -1,16 +1,18 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import com.enderstudy.shoppinglist.activities.CreateActivity;
+import com.enderstudy.shoppinglist.entities.ListItem;
+import com.enderstudy.shoppinglist.R;
 
 import java.text.NumberFormat;
 import java.util.List;
@@ -21,7 +23,7 @@ public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListIt
     private List<ListItem> listItems;
     private ListItemViewHolder activeViewHolder;
 
-    ListItemAdapter(Context context) {
+    public ListItemAdapter(Context context) {
         inflater = LayoutInflater.from(context);
     }
 

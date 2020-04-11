@@ -1,9 +1,11 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.repositories;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
 
+import com.enderstudy.shoppinglist.entities.ListItem;
+import com.enderstudy.shoppinglist.databases.ShoppingListDatabase;
 import com.enderstudy.shoppinglist.dao.ListItemDao;
 
 import java.util.List;

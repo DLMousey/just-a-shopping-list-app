@@ -1,9 +1,10 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.viewmodels;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 
+import com.enderstudy.shoppinglist.entities.ListItem;
 import com.enderstudy.shoppinglist.repositories.ListItemRepository;
 
 import java.util.List;
