@@ -15,6 +15,8 @@ import java.text.NumberFormat;
 
 public class CreateActivity extends AppCompatActivity {
 
+    private static final String TAG = CreateActivity.class.getSimpleName();
+
     private final ListItemRepository listItemRepository = new ListItemRepository(getApplication());
 
     private TextView nameInput;

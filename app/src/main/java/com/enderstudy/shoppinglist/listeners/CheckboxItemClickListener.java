@@ -9,6 +9,8 @@ import android.view.View;
 
 public class CheckboxItemClickListener extends RecyclerView.SimpleOnItemTouchListener {
 
+    private static final String TAG = CheckboxItemClickListener.class.getSimpleName();
+
     public interface OnRecyclerClickListener {
         void OnItemClick(View view, int position);
     }

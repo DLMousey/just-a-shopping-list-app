@@ -10,6 +10,8 @@ import com.enderstudy.shoppinglist.R;
 
 public class PrivacyActivity extends AppCompatActivity {
 
+    private static final String TAG = PrivacyActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

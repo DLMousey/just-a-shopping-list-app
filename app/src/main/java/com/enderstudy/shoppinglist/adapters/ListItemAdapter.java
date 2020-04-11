@@ -19,6 +19,8 @@ import java.util.List;
 
 public class ListItemAdapter extends RecyclerView.Adapter<ListItemAdapter.ListItemViewHolder> {
 
+    private static final String TAG = ListItemAdapter.class.getSimpleName();
+
     private final LayoutInflater inflater;
     private List<ListItem> listItems;
     private ListItemViewHolder activeViewHolder;

@@ -12,6 +12,8 @@ import java.util.List;
 
 public class ListItemRepository {
 
+    private static final String TAG = ListItemRepository.class.getSimpleName();
+
     private ListItemDao listItemDao;
     private LiveData<List<ListItem>> allListItems;
 
