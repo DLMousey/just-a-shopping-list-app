@@ -11,6 +11,8 @@ import com.enderstudy.shoppinglist.entities.ListItem;
 @Database(entities = {ListItem.class}, version = 4, exportSchema = false)
 public abstract class ShoppingListDatabase extends RoomDatabase {
 
+    private static final String TAG = ShoppingListDatabase.class.getSimpleName();
+
     public abstract ListItemDao listItemDao();
 
     private static ShoppingListDatabase INSTANCE;

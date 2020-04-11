@@ -28,6 +28,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements CheckboxItemClickListener.OnRecyclerClickListener {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
+
     private ListItemViewModel listItemViewModel;
     private RecyclerView recyclerView;
     private ListItemAdapter adapter;

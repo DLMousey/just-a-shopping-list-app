@@ -12,6 +12,8 @@ import java.util.concurrent.atomic.AtomicLong;
 @Entity(tableName = "list_item_table")
 public class ListItem implements Serializable {
 
+    private static final String TAG = ListItem.class.getSimpleName();
+
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name="id")
     private Integer id;

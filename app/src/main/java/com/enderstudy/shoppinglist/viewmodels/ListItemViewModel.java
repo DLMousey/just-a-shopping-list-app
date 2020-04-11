@@ -17,6 +17,8 @@ import java.util.List;
  */
 public class ListItemViewModel extends AndroidViewModel {
 
+    private static final String TAG = ListItemViewModel.class.getSimpleName();
+
     private ListItemRepository repository;
     private LiveData<List<ListItem>> allListItems;
 
