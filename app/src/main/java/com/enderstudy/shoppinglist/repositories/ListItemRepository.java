@@ -1,8 +1,12 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.repositories;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
+
+import com.enderstudy.shoppinglist.entities.ListItem;
+import com.enderstudy.shoppinglist.databases.ShoppingListDatabase;
+import com.enderstudy.shoppinglist.dao.ListItemDao;
 
 import java.util.List;
 
@@ -11,13 +15,13 @@ public class ListItemRepository {
     private ListItemDao listItemDao;
     private LiveData<List<ListItem>> allListItems;
 
-    ListItemRepository(Application application) {
+    public ListItemRepository(Application application) {
         ShoppingListDatabase db = ShoppingListDatabase.getDatabase(application); // Get/create the database class
         listItemDao = db.listItemDao(); // Fetch the data access object for the list item
         allListItems = listItemDao.getAllListItems(); // Get all list items and store a copy of them in this repository as a cache
     }
 
-    LiveData<List<ListItem>> getAllListItems() {
+    public LiveData<List<ListItem>> getAllListItems() {
         return allListItems;
     }
 

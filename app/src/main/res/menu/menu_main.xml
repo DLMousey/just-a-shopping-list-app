@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.enderstudy.shoppinglist.MainActivity">
+    tools:context="com.enderstudy.shoppinglist.activities.MainActivity">
     <item
         android:id="@+id/action_privacy"
         android:orderInCategory="100"

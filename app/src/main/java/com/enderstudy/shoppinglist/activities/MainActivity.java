@@ -1,4 +1,4 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.activities;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -18,6 +18,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.enderstudy.shoppinglist.entities.ListItem;
+import com.enderstudy.shoppinglist.viewmodels.ListItemViewModel;
+import com.enderstudy.shoppinglist.R;
+import com.enderstudy.shoppinglist.adapters.ListItemAdapter;
 import com.enderstudy.shoppinglist.listeners.CheckboxItemClickListener;
 
 import java.util.List;

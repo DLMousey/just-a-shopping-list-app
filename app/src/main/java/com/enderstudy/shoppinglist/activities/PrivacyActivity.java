@@ -1,10 +1,12 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.activities;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.enderstudy.shoppinglist.R;
 
 public class PrivacyActivity extends AppCompatActivity {
 

@@ -1,12 +1,15 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.enderstudy.shoppinglist.entities.ListItem;
+import com.enderstudy.shoppinglist.repositories.ListItemRepository;
+import com.enderstudy.shoppinglist.R;
 
 import java.text.NumberFormat;
 

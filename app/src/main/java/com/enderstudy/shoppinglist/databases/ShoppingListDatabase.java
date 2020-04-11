@@ -1,12 +1,12 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.databases;
 
-import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
-import android.os.AsyncTask;
-import android.support.annotation.NonNull;
+
+import com.enderstudy.shoppinglist.dao.ListItemDao;
+import com.enderstudy.shoppinglist.entities.ListItem;
 
 @Database(entities = {ListItem.class}, version = 4, exportSchema = false)
 public abstract class ShoppingListDatabase extends RoomDatabase {

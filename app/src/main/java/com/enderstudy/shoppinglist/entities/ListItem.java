@@ -1,4 +1,4 @@
-package com.enderstudy.shoppinglist;
+package com.enderstudy.shoppinglist.entities;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
