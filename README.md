@@ -11,8 +11,7 @@ There's also no ads, because far too many shopping list apps i've used play unsk
 - Hope and pray the gradle build works.
 
 ## Screenshots
-![Empty state](https://nextcloud.enderstudy.com/s/fHyjZ2NMtomHgkE/preview "Empty state")
-![Create form](https://nextcloud.enderstudy.com/s/GdoKd97F4xLqoFp/preview "Create form")
-![List state](https://nextcloud.enderstudy.com/s/oPHXGoNPYHENfPq/preview "List state")
-![Checked item](https://nextcloud.enderstudy.com/s/eaFqyXkenQEW8gn/preview "Checked item")
+![Empty state](https://cdn.discordapp.com/attachments/679316041955803136/849085292131516436/Screenshot_20210601-014104.png "Empty state")
+![Create form](https://cdn.discordapp.com/attachments/679316041955803136/849085292349751296/Screenshot_20210601-014126.png "Create form")
+![List state](https://cdn.discordapp.com/attachments/679316041955803136/849085292489080882/Screenshot_20210601-014134.png "List state")
 
