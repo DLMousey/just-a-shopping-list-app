@@ -40,6 +40,14 @@ public class ListItemRepository {
         new deleteAsyncTask(listItemDao).execute(listItem);
     }
 
+    public void purge() {
+        new purgeAsyncTask(listItemDao).execute();
+    }
+
+    public void addAllToCart() {
+        new addAllToCartAsyncTask(listItemDao).execute();
+    }
+
     // Inner class that contains the logic for inserting a new ListItem into the database.
     // Because this is an async task it'll be executed on another thread
     private static class insertAsyncTask extends AsyncTask<ListItem, Void, Void> {
@@ -87,6 +95,36 @@ public class ListItemRepository {
         @Override
         protected Void doInBackground(final ListItem... params) {
             asyncListItemDao.delete(params[0]);
+            return null;
+        }
+    }
+
+    private static class purgeAsyncTask extends AsyncTask<Void, Void, Void> {
+
+        private ListItemDao asyncListItemDao;
+
+        purgeAsyncTask(ListItemDao dao) {
+            asyncListItemDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final Void... voids) {
+            asyncListItemDao.deleteAll();
+            return null;
+        }
+    }
+
+    private static class addAllToCartAsyncTask extends AsyncTask<Void, Void, Void> {
+
+        private ListItemDao asyncListItemDao;
+
+        addAllToCartAsyncTask(ListItemDao dao) {
+            asyncListItemDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            asyncListItemDao.addAllToCart();
             return null;
         }
     }

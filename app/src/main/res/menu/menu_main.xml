@@ -3,8 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.enderstudy.shoppinglist.activities.MainActivity">
     <item
-        android:id="@+id/action_privacy"
+        android:id="@+id/action_clear"
         android:orderInCategory="100"
+        android:title="@string/clear_list"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_add_all"
+        android:orderInCategory="200"
+        android:title="@string/add_all_to_cart"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_privacy"
+        android:orderInCategory="200"
         android:title="@string/action_privacy"
         app:showAsAction="never" />
 </menu>

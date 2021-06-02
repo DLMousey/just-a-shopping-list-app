@@ -148,6 +148,20 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
                 Intent privacyIntent = new Intent(this, PrivacyActivity.class);
                 startActivity(privacyIntent);
                 break;
+            case R.id.action_add_all:
+
+                if (listItemViewModel.getAllListItems().getValue().size() == 0) {
+                    Snackbar.make(findViewById(R.id.action_add_all), "No items on list!", Snackbar.LENGTH_SHORT).show();
+                    break;
+                }
+
+                listItemViewModel.addAllToCart();
+                Snackbar.make(findViewById(R.id.action_add_all), "Added all items to cart", Snackbar.LENGTH_SHORT).show();
+                break;
+            case R.id.action_clear:
+                listItemViewModel.clear();
+                Snackbar.make(findViewById(R.id.action_clear), "List cleared", Snackbar.LENGTH_SHORT).show();
+                break;
         }
 
         return super.onOptionsItemSelected(item);

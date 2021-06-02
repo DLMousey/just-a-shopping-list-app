@@ -51,4 +51,12 @@ public class ListItemViewModel extends AndroidViewModel {
         repository.update(listItem);
     }
 
+    public void clear() {
+        repository.purge();
+    }
+
+    public void addAllToCart() {
+        repository.addAllToCart();
+    }
+
 }
