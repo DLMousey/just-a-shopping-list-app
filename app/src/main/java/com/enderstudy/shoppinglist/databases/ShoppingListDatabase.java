@@ -1,9 +1,7 @@
 package com.enderstudy.shoppinglist.databases;
 
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
+import androidx.room.*;
 
 import com.enderstudy.shoppinglist.dao.ListItemDao;
 import com.enderstudy.shoppinglist.entities.ListItem;
