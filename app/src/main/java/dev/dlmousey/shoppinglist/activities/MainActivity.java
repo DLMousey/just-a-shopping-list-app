@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
                 startActivity(privacyIntent);
                 break;
             case R.id.action_add_all:
-                if (listItemViewModel.getAllListItems().getValue().size() == 0) {
+                if (listItemViewModel.getCount() == 0) {
                     Snackbar.make(getWindow().getDecorView(), "No items on list!", Snackbar.LENGTH_SHORT).show();
                     break;
                 }
@@ -158,8 +158,13 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
                 Snackbar.make(getWindow().getDecorView(), "Added all items to cart", Snackbar.LENGTH_SHORT).show();
                 break;
             case R.id.action_clear:
+                if (listItemViewModel.getCount() == 0) {
+                    Snackbar.make(getWindow().getDecorView(), "No items on list!", Snackbar.LENGTH_SHORT).show();
+                    break;
+                }
+
                 listItemViewModel.clear();
-                Snackbar.make(findViewById(R.id.action_clear), "List cleared", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(getWindow().getDecorView(), "List cleared", Snackbar.LENGTH_SHORT).show();
                 break;
         }
 

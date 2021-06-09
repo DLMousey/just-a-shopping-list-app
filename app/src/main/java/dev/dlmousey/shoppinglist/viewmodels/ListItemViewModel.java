@@ -33,6 +33,10 @@ public class ListItemViewModel extends AndroidViewModel {
         return allListItems;
     }
 
+    public int getCount() {
+        return this.allListItems.getValue().size();
+    }
+
     // It might seen like we've declared this method in a ton of places, but in reality
     // this is just so we can do away with the implementation detail and focus on the business logic.
     // The repository's job is to figure out the nitty gritty of where this data will end up be it
