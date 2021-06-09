@@ -1,13 +1,13 @@
-package com.enderstudy.shoppinglist.repositories;
+package dev.dlmousey.shoppinglist.repositories;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
-import com.enderstudy.shoppinglist.entities.ListItem;
-import com.enderstudy.shoppinglist.databases.ShoppingListDatabase;
-import com.enderstudy.shoppinglist.dao.ListItemDao;
+import dev.dlmousey.shoppinglist.entities.ListItem;
+import dev.dlmousey.shoppinglist.databases.ShoppingListDatabase;
+import dev.dlmousey.shoppinglist.dao.ListItemDao;
 
 import java.util.List;
 

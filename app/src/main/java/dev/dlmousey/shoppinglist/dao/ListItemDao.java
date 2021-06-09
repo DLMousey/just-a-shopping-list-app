@@ -1,9 +1,9 @@
-package com.enderstudy.shoppinglist.dao;
+package dev.dlmousey.shoppinglist.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.*;
 
-import com.enderstudy.shoppinglist.entities.ListItem;
+import dev.dlmousey.shoppinglist.entities.ListItem;
 
 import java.util.List;
 

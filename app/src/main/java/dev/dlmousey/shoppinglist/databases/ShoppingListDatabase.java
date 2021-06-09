@@ -1,10 +1,10 @@
-package com.enderstudy.shoppinglist.databases;
+package dev.dlmousey.shoppinglist.databases;
 
 import android.content.Context;
 import androidx.room.*;
 
-import com.enderstudy.shoppinglist.dao.ListItemDao;
-import com.enderstudy.shoppinglist.entities.ListItem;
+import dev.dlmousey.shoppinglist.dao.ListItemDao;
+import dev.dlmousey.shoppinglist.entities.ListItem;
 
 @Database(entities = {ListItem.class}, version = 4, exportSchema = false)
 public abstract class ShoppingListDatabase extends RoomDatabase {

@@ -1,11 +1,10 @@
-package com.enderstudy.shoppinglist.entities;
+package dev.dlmousey.shoppinglist.entities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.room.*;
 
 import java.io.Serializable;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Entity(tableName = "list_item_table")
 public class ListItem implements Serializable {

@@ -1,4 +1,4 @@
-package com.enderstudy.shoppinglist.activities;
+package dev.dlmousey.shoppinglist.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,11 +17,11 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.enderstudy.shoppinglist.R;
-import com.enderstudy.shoppinglist.adapters.ListItemAdapter;
-import com.enderstudy.shoppinglist.entities.ListItem;
-import com.enderstudy.shoppinglist.listeners.CheckboxItemClickListener;
-import com.enderstudy.shoppinglist.viewmodels.ListItemViewModel;
+import dev.dlmousey.shoppinglist.R;
+import dev.dlmousey.shoppinglist.adapters.ListItemAdapter;
+import dev.dlmousey.shoppinglist.entities.ListItem;
+import dev.dlmousey.shoppinglist.listeners.CheckboxItemClickListener;
+import dev.dlmousey.shoppinglist.viewmodels.ListItemViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -149,14 +149,13 @@ public class MainActivity extends AppCompatActivity implements CheckboxItemClick
                 startActivity(privacyIntent);
                 break;
             case R.id.action_add_all:
-
                 if (listItemViewModel.getAllListItems().getValue().size() == 0) {
-                    Snackbar.make(findViewById(R.id.action_add_all), "No items on list!", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(getWindow().getDecorView(), "No items on list!", Snackbar.LENGTH_SHORT).show();
                     break;
                 }
 
                 listItemViewModel.addAllToCart();
-                Snackbar.make(findViewById(R.id.action_add_all), "Added all items to cart", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(getWindow().getDecorView(), "Added all items to cart", Snackbar.LENGTH_SHORT).show();
                 break;
             case R.id.action_clear:
                 listItemViewModel.clear();

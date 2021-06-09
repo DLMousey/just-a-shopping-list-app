@@ -1,12 +1,12 @@
-package com.enderstudy.shoppinglist.viewmodels;
+package dev.dlmousey.shoppinglist.viewmodels;
 
 import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.enderstudy.shoppinglist.entities.ListItem;
-import com.enderstudy.shoppinglist.repositories.ListItemRepository;
+import dev.dlmousey.shoppinglist.entities.ListItem;
+import dev.dlmousey.shoppinglist.repositories.ListItemRepository;
 
 import java.util.List;
 
