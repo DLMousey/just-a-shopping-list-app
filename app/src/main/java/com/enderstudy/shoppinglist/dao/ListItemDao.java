@@ -25,6 +25,6 @@ public interface ListItemDao {
     @Query("SELECT * FROM list_item_table ORDER BY name ASC")
     LiveData<List<ListItem>> getAllListItems();
 
-    @Query("UPDATE list_item_table SET in_basket = 1")
+    @Query("UPDATE list_item_table SET in_basket = 1 WHERE in_basket = 0")
     void addAllToCart();
 }
