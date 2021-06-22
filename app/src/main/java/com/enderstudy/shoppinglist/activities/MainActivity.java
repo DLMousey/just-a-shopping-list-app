@@ -1,4 +1,4 @@
-package dev.dlmousey.shoppinglist.activities;
+package com.enderstudy.shoppinglist.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,11 +17,11 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import dev.dlmousey.shoppinglist.R;
-import dev.dlmousey.shoppinglist.adapters.ListItemAdapter;
-import dev.dlmousey.shoppinglist.entities.ListItem;
-import dev.dlmousey.shoppinglist.listeners.CheckboxItemClickListener;
-import dev.dlmousey.shoppinglist.viewmodels.ListItemViewModel;
+import com.enderstudy.shoppinglist.R;
+import com.enderstudy.shoppinglist.adapters.ListItemAdapter;
+import com.enderstudy.shoppinglist.entities.ListItem;
+import com.enderstudy.shoppinglist.listeners.CheckboxItemClickListener;
+import com.enderstudy.shoppinglist.viewmodels.ListItemViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 

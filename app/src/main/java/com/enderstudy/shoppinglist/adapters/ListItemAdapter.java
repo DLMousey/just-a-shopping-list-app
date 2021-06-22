@@ -1,4 +1,4 @@
-package dev.dlmousey.shoppinglist.adapters;
+package com.enderstudy.shoppinglist.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,9 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import dev.dlmousey.shoppinglist.activities.CreateActivity;
-import dev.dlmousey.shoppinglist.entities.ListItem;
-import dev.dlmousey.shoppinglist.R;
+import com.enderstudy.shoppinglist.activities.CreateActivity;
+import com.enderstudy.shoppinglist.entities.ListItem;
+import com.enderstudy.shoppinglist.R;
 
 import java.text.NumberFormat;
 import java.util.List;

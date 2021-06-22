@@ -1,4 +1,4 @@
-package dev.dlmousey.shoppinglist.listeners;
+package com.enderstudy.shoppinglist.listeners;
 
 import android.content.Context;
 import android.view.GestureDetector;

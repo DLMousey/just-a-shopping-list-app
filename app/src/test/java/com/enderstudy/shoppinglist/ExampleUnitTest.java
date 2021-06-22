@@ -1,4 +1,4 @@
-package dev.dlmousey.shoppinglist;
+package com.enderstudy.shoppinglist;
 
 import org.junit.Test;
 

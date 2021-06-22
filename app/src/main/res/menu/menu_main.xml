@@ -1,20 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="dev.dlmousey.shoppinglist.activities.MainActivity">
+    tools:context="com.enderstudy.shoppinglist.activities.MainActivity">
+    <item
+        android:id="@+id/action_add_all"
+        android:orderInCategory="100"
+        android:title="@string/add_all_to_cart"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_clear"
-        android:orderInCategory="100"
+        android:orderInCategory="300"
         android:title="@string/clear_list"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_add_all"
-        android:orderInCategory="200"
-        android:title="@string/add_all_to_cart"
-        app:showAsAction="never" />
-    <item
         android:id="@+id/action_privacy"
-        android:orderInCategory="200"
+        android:orderInCategory="400"
         android:title="@string/action_privacy"
         app:showAsAction="never" />
 </menu>
