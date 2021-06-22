@@ -6,7 +6,7 @@ android {
         applicationId "com.enderstudy.shoppinglist"
         minSdkVersion 27
         targetSdkVersion 30
-        versionCode 3
+        versionCode 4
         versionName "0.1.1"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
