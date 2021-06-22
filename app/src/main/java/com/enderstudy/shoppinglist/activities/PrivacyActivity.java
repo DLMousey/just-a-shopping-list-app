@@ -1,4 +1,4 @@
-package dev.dlmousey.shoppinglist.activities;
+package com.enderstudy.shoppinglist.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,7 +7,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import dev.dlmousey.shoppinglist.R;
+import com.enderstudy.shoppinglist.R;
 
 public class PrivacyActivity extends AppCompatActivity {
 

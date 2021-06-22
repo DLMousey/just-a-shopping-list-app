@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "dev.dlmousey.shoppinglist"
+        applicationId "com.enderstudy.shoppinglist"
         minSdkVersion 27
         targetSdkVersion 30
         versionCode 3
-        versionName "0.0.3"
+        versionName "0.1.1"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {

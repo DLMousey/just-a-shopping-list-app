@@ -1,4 +1,4 @@
-package dev.dlmousey.shoppinglist.activities;
+package com.enderstudy.shoppinglist.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +8,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import dev.dlmousey.shoppinglist.entities.ListItem;
-import dev.dlmousey.shoppinglist.repositories.ListItemRepository;
-import dev.dlmousey.shoppinglist.R;
+import com.enderstudy.shoppinglist.entities.ListItem;
+import com.enderstudy.shoppinglist.repositories.ListItemRepository;
+import com.enderstudy.shoppinglist.R;
 
 import java.text.NumberFormat;
 

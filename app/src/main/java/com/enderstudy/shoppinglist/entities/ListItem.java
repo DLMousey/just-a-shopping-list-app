@@ -1,4 +1,4 @@
-package dev.dlmousey.shoppinglist.entities;
+package com.enderstudy.shoppinglist.entities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
